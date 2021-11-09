@@ -99,9 +99,15 @@
 			<div class="text-center">
 				<h1 class="mb-3">Implementasi Ajax Sederhana</h1>
 				<div class="">
-					<button id="text" class="btn btn-primary mx-1 mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#requestText" aria-expanded="false" aria-controls="requestText" onclick="getText('assets/html/text.html', 'responseText')">Request Text</button>
-					<button id="database" class="btn btn-primary mx-1 mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#requestDatabase" aria-expanded="false" aria-controls="requestDatabase">Request Database</button>
-				</div>
+					<!-- <button id="text" class="btn btn-primary mx-1 mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#requestText" aria-expanded="false" aria-controls="requestText" onclick="getText('assets/html/text.html', 'responseText')">Request Text</button>
+					<button id="database" class="btn btn-primary mx-1 mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#requestDatabase" aria-expanded="false" aria-controls="requestDatabase">Request Database</button> -->
+                    
+                    <input type="radio" class="btn-check" name="options" id="text" data-bs-toggle="collapse" data-bs-target="#requestText:not(.show), #requestDatabase.show" onclick="getText('assets/html/text.html', 'responseText')" autocomplete="off">
+                    <label class="btn btn-primary mx-1 mb-1" for="text">Request Text</label>
+
+                    <input type="radio" class="btn-check" name="options" id="database" data-bs-toggle="collapse" data-bs-target="#requestDatabase:not(.show), #requestText.show" autocomplete="off">
+                    <label class="btn btn-primary mx-1 mb-1" for="database">Request Database</label>
+                </div>
 			</div>
 			<div class="collapse" id="requestText">
 				<div class="card card-body" id="responseText">
@@ -137,6 +143,9 @@
 									<option value=""></option>
 								</select>
 							</div>
+                            <div class="">
+                                <div>*Untuk penerapannya dapat dilihat pada link dokumentasi <a href="https://auliaaepa.blogspot.com/2021/11/tugas-7-penerapan-ajax-sederhana.html">berikut.</a></div>
+                            </div>
 						</div>
 					</div>
 				</div>
